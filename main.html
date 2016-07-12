@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="background">
+    <header class="title">
+      <h1 id="head"> Roadtrip Fuel Costs</h1>
+      <h3 id="head"> How much will it cost? Use our handy site to estimate fuel costs!<h3>
+      <button class="nav"><a href="intro.html">Home</a></button>
+      <button class="nav"><a href="main.html">Cost Calculator</a></button>
+      <button class="nav"><a href="list.html">Saved Trips</a></button>
+    </header>
+    
+    <section id="initialDisplay">
+      <form class="tripInputs">
+         <input type="text" class="inputForm" id="tripName" placeholder=" Name your trip !" required="required">
+      </form>
+      
+      <form class="tripInputs">
+        <input type="text" class="inputForm" id="startCity" placeholder=" Start City" required="required">
+        <input type="text" class="inputForm" id="startState" placeholder=" Start State" required="required">
+      </form>
+      
+      <form class="tripInputs">
+        <input type="text" class="inputForm" id="destCity" placeholder=" Destination City" required="required">
+        <input type="text" class="inputForm" id="destState" placeholder=" Destination State" required="required">
+      </form>
+      
+      <form id="btnForm">
+        <button id="displayTripBtn" class="nav bigBtn">Save and display trip</button>
+      </form>
+      
+    </section>
+        
+    <section id="secondDisplay">
+      <article>
+        <div class="mapContainer">
+          <div id="gmap_display" class="heiWid" style="background:none">
+            <iframe id="googleMap" class="heiWid" frameborder="0" src=""></iframe>
+          </div>
+        </div>
+      </article>
+      
+      <form class="detailInputs">
+        <label>Choose a trip and enter the length in miles  </label>
+         <input type="text" id="tripLength" class="inputForm" placeholder="2460" required="required">
+      </form>
+      
+      <form class="detailInputs">
+        <label>Enter an average current fuel price</label>
+         <input type="text" id="fuelPrice" class="inputForm" placeholder="2.89" required="required">
+      </form>
+      
+      <form class="detailInputs">
+        <label>Enter your cars highway MPG (miles per gallon)  </label>
+         <input type="text" id="carMPG" class="inputForm" placeholder="30" required="required">
+      </form>
+      
+      <form id="btnForm">
+        <button id="determineCostBtn" class="nav bigBtn">Determine Cost</button>
+      </form>
+      
+    </section>
+    
+    <section id="finalDisplay">
+      <article id="costs">
+        <p>Estimated fuel costs for this trip:<p>
+        <p id="resultDisplay"> RESULT <p>
+      </article>
+    </section>
+    
+    <footer>
+      <p><small>Created by Llew Griffith (2016)</small></p>
+    </footer>
+    
+    <script type="text/javascript" src="javascript/app.js"></script>  
+  </body>
+</html>
